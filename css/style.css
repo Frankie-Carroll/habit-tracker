@@ -1,1 +1,115 @@
 /* This page will be used for the main style of every other page expect specificy style for the dashboard*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 25%);
+    --secondary-text-color: hsl(0, 0%, 45%); 
+    --primary-green: hsl(140, 75%, 23%);
+    --hover-green: hsl(140, 60%, 30%);
+    --primary-blue: hsl(220, 80%, 35%);
+    --secondary-blue: hsl(220, 80%, 28%);
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: system-ui, -apple-system;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+}
+
+/* This is code for the landing page */
+
+h1, a{
+    font-family: var(--secondary-font);
+}
+
+#header-wrapper{
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#landing-page-title{
+    margin-right: 1rem;
+    font-family: var(--main-font);
+}
+
+.clamp{
+    font-size: clamp(.25rem, 2vw, 1.5rem);
+}
+
+.clamp-title{
+    font-size: clamp(.5rem, 2vw, 2.5rem);
+}
+
+.icon-img{
+    max-width: 90px;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    mix-blend-mode: multiply;
+}
+
+.link-text-color{
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+}
+
+.link-text-color::after{
+    color: var(--secondary-text-color);
+}
+
+.link-text-color:hover{
+    color: var(--primary-green);
+}
+
+.link-text-color:active{
+    color: var(--primary-blue);
+}
+
+.custom-btn{
+    width: 8em;
+    height: 3em;
+    color: var(--bg-color);
+    font-size: 1em;
+    font-family: var(--main-font);
+    background-color: var(--primary-green);
+    border: 1px solid var(--hover-green);
+    border-radius: .5rem;
+    margin-top: 2em;
+}
+
+.custom-btn:hover{
+    box-shadow: 0 0 15px var(--hover-green);
+    background-color: var(--hover-green);
+}
+
+
+#calendar-picture{
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: 20em;
+    top: 7em;
+}
+
+#custom-cards{
+    margin-top: 18em;
+}
+
+.features{
+    margin-top: 5em;
+    font-family: var(--main-font);
+}
